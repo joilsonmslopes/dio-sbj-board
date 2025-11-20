@@ -1,6 +1,7 @@
 package dio.board.api;
 
 import dio.board.api.persistence.migration.MigrationStrategy;
+import dio.board.api.ui.MainMenu;
 
 import java.sql.SQLException;
 
@@ -12,6 +13,7 @@ public class BoardApiApplication {
 		try (var connection = getConnection()) {
             new MigrationStrategy(connection).executeMigration();
         }
+        new MainMenu().execute();
 	}
 
 }
