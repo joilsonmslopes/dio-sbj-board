@@ -3,9 +3,7 @@ package dio.board.api.persistence.dao;
 import dio.board.api.persistence.entity.Board;
 import lombok.AllArgsConstructor;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Optional;
 
 @AllArgsConstructor
@@ -14,7 +12,7 @@ public class BoardDAO {
 
     public Board insert(final Board entity) throws SQLException {
         var sql = "INSERT INTO BOARDS (name) VALUES (?);";
-        try (var statement = connection.prepareStatement(sql)) {
+        try (var statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, entity.getName());
             statement.executeUpdate();
             try (ResultSet rs = statement.getGeneratedKeys()) {

@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -18,7 +19,7 @@ public class CardDAO {
 
     public Card insert(final Card entity) throws SQLException {
         var sql = "INSERT INTO CARDS (title, description, board_column_id) values (?, ?, ?);";
-        try(var statement = connection.prepareStatement(sql)){
+        try(var statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)){
             var i = 1;
             statement.setString(i ++, entity.getTitle());
             statement.setString(i ++, entity.getDescription());
