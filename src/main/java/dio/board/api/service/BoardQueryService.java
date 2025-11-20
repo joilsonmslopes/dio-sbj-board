@@ -4,16 +4,10 @@ import dio.board.api.dto.BoardDetailsDTO;
 import dio.board.api.persistence.dao.BoardColumnDAO;
 import dio.board.api.persistence.dao.BoardDAO;
 import dio.board.api.persistence.entity.Board;
-import dio.board.api.persistence.entity.BoardColumn;
-import dio.board.api.persistence.entity.BoardColumnKindEnum;
-import dio.board.api.persistence.entity.Card;
 import lombok.AllArgsConstructor;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 
 @AllArgsConstructor

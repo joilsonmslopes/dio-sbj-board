@@ -1,4 +1,4 @@
-nov. 18, 2025 10:03:17 PM liquibase.database
+nov. 18, 2025 10:33:06 PM liquibase.database
 INFORMAÇÕES: Error fetching reserved words list from JDBC driver
 java.sql.SQLSyntaxErrorException: Unknown column 'RESERVED' in 'WHERE'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
@@ -12,53 +12,58 @@ java.sql.SQLSyntaxErrorException: Unknown column 'RESERVED' in 'WHERE'
 	at dio.board.api.persistence.migration.MigrationStrategy.executeMigration(MigrationStrategy.java:34)
 	at dio.board.api.BoardApiApplication.main(BoardApiApplication.java:13)
 
-nov. 18, 2025 10:03:17 PM liquibase.changelog
+nov. 18, 2025 10:33:06 PM liquibase.changelog
 INFORMAÇÕES: Reading resource: db/changelog/migrations/db.changelog-202511182158.sql
-nov. 18, 2025 10:03:17 PM liquibase.changelog
-INFORMAÇÕES: Creating database history table with name: `dio-sbj-board`.DATABASECHANGELOG
-nov. 18, 2025 10:03:18 PM liquibase.changelog
+nov. 18, 2025 10:33:06 PM liquibase.changelog
 INFORMAÇÕES: Reading from `dio-sbj-board`.DATABASECHANGELOG
-nov. 18, 2025 10:03:18 PM liquibase.snapshot
-INFORMAÇÕES: Creating snapshot
-nov. 18, 2025 10:03:18 PM liquibase.executor
-ADVERTÊNCIA: Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
-nov. 18, 2025 10:03:18 PM liquibase.lockservice
+nov. 18, 2025 10:33:06 PM liquibase.changelog
+INFORMAÇÕES: Reading resource: db/changelog/migrations/db.changelog-202511182213.sql
+nov. 18, 2025 10:33:06 PM liquibase.changelog
+INFORMAÇÕES: Reading resource: db/changelog/migrations/db.changelog-202511182222.sql
+nov. 18, 2025 10:33:06 PM liquibase.changelog
+INFORMAÇÕES: Reading resource: db/changelog/migrations/db.changelog-202511182225.sql
+nov. 18, 2025 10:33:06 PM liquibase.lockservice
 INFORMAÇÕES: Successfully acquired change log lock
-nov. 18, 2025 10:03:18 PM liquibase.command
-INFORMAÇÕES: Using deploymentId: 3514196965
-nov. 18, 2025 10:03:18 PM liquibase.changelog
+nov. 18, 2025 10:33:06 PM liquibase.command
+INFORMAÇÕES: Using deploymentId: 3515985841
+nov. 18, 2025 10:33:06 PM liquibase.changelog
 INFORMAÇÕES: Reading from `dio-sbj-board`.DATABASECHANGELOG
-Running Changeset: db/changelog/migrations/db.changelog-202511182158.sql::202511182158::joilson
-nov. 18, 2025 10:03:18 PM liquibase.changelog
+Running Changeset: db/changelog/migrations/db.changelog-202511182222.sql::202511182222::joilson
+nov. 18, 2025 10:33:06 PM liquibase.changelog
 INFORMAÇÕES: Custom SQL executed
-nov. 18, 2025 10:03:18 PM liquibase.changelog
-INFORMAÇÕES: ChangeSet db/changelog/migrations/db.changelog-202511182158.sql::202511182158::joilson ran successfully in 31ms
+nov. 18, 2025 10:33:06 PM liquibase.changelog
+INFORMAÇÕES: ChangeSet db/changelog/migrations/db.changelog-202511182222.sql::202511182222::joilson ran successfully in 31ms
+Running Changeset: db/changelog/migrations/db.changelog-202511182225.sql::202511182225::joilson
+nov. 18, 2025 10:33:06 PM liquibase.changelog
+INFORMAÇÕES: Custom SQL executed
+nov. 18, 2025 10:33:06 PM liquibase.changelog
+INFORMAÇÕES: ChangeSet db/changelog/migrations/db.changelog-202511182225.sql::202511182225::joilson ran successfully in 18ms
 
 UPDATE SUMMARY
-Run:                          1
-Previously run:               0
+Run:                          2
+Previously run:               2
 Filtered out:                 0
 -------------------------------
-Total change sets:            1
+Total change sets:            4
 
-nov. 18, 2025 10:03:18 PM liquibase.util
+nov. 18, 2025 10:33:06 PM liquibase.util
 INFORMAÇÕES: UPDATE SUMMARY
-nov. 18, 2025 10:03:18 PM liquibase.util
-INFORMAÇÕES: Run:                          1
-nov. 18, 2025 10:03:18 PM liquibase.util
-INFORMAÇÕES: Previously run:               0
-nov. 18, 2025 10:03:18 PM liquibase.util
+nov. 18, 2025 10:33:06 PM liquibase.util
+INFORMAÇÕES: Run:                          2
+nov. 18, 2025 10:33:06 PM liquibase.util
+INFORMAÇÕES: Previously run:               2
+nov. 18, 2025 10:33:06 PM liquibase.util
 INFORMAÇÕES: Filtered out:                 0
-nov. 18, 2025 10:03:18 PM liquibase.util
+nov. 18, 2025 10:33:06 PM liquibase.util
 INFORMAÇÕES: -------------------------------
-nov. 18, 2025 10:03:18 PM liquibase.util
-INFORMAÇÕES: Total change sets:            1
-nov. 18, 2025 10:03:18 PM liquibase.util
+nov. 18, 2025 10:33:06 PM liquibase.util
+INFORMAÇÕES: Total change sets:            4
+nov. 18, 2025 10:33:06 PM liquibase.util
 INFORMAÇÕES: Update summary generated
-nov. 18, 2025 10:03:18 PM liquibase.command
+nov. 18, 2025 10:33:06 PM liquibase.command
 INFORMAÇÕES: Update command completed successfully.
-Liquibase: Update has been successful. Rows affected: 1
-nov. 18, 2025 10:03:18 PM liquibase.lockservice
+Liquibase: Update has been successful. Rows affected: 2
+nov. 18, 2025 10:33:06 PM liquibase.lockservice
 INFORMAÇÕES: Successfully released change log lock
-nov. 18, 2025 10:03:18 PM liquibase.command
+nov. 18, 2025 10:33:06 PM liquibase.command
 INFORMAÇÕES: Command execution complete

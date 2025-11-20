@@ -6,7 +6,6 @@ import java.time.OffsetDateTime;
 
 @Data
 public class Block {
-
     private Long id;
     private OffsetDateTime blockedAt;
     private String blockedReason;

@@ -17,7 +17,6 @@ public class BoardDAO {
         try (var statement = connection.prepareStatement(sql)) {
             statement.setString(1, entity.getName());
             statement.executeUpdate();
-
             try (ResultSet rs = statement.getGeneratedKeys()) {
                 if (rs.next()) {
                     long id = rs.getLong(1);
@@ -25,7 +24,6 @@ public class BoardDAO {
                 }
             }
         }
-
         return entity;
     }
 

@@ -1,6 +1,8 @@
 package dio.board.api.persistence.entity;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +11,10 @@ import java.util.List;
 public class BoardColumn {
     private Long id;
     private String name;
-    private Integer order;
+    private int order;
     private BoardColumnKindEnum kind;
     private Board board = new Board();
-    private List<Card>  cards = new ArrayList<>();
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    private List<Card> cards = new ArrayList<>();
 }
